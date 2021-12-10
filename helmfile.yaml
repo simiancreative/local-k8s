@@ -1,0 +1,13 @@
+releases:
+
+- name: mysql
+  namespace: local                       # target namespace
+  chart: ./charts/mysql              # the chart being installed to create this release, referenced by relative path to local helmfile
+  values:
+  - "./charts/mysql/values.yaml"             # Values file (relative path to manifest)
+
+- name: rabbit
+  namespace: local
+  chart: ./charts/rabbit
+  values:
+  - "./charts/rabbit/values.yaml"
